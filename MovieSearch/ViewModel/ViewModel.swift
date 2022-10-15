@@ -29,7 +29,7 @@ class ViewModel{
     func getMovieDetailByIMDbID(imdbID: String, completionHandler: @escaping (Film?, Bool) -> () ) {
         print ("Fetching film by IMDb title")
 
-        var requestURL = "http://www.omdbapi.com/?apikey=3fa6980&i=" + imdbID
+        var requestURL = "http://www.omdbapi.com/?apikey="APIKEY"&i=" + imdbID
         requestURL = requestURL.replacingOccurrences(of: " ", with: "%20")
         
         AF.request(requestURL)
