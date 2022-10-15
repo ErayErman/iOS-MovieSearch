@@ -9,7 +9,7 @@ class ViewModel{
     func getMovie (_ searchText: String, completionHandler: @escaping (Films?, Bool) -> () ) {
         
         print ("Fetching films.")
-        let url: String = "http://www.omdbapi.com/?apikey=3fa6980&s="
+        let url: String = "http://www.omdbapi.com/?apikey="APIKEY"&s="
         var requestURL = url + searchText
         requestURL = requestURL.replacingOccurrences(of: " ", with: "%20")
         
